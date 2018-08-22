@@ -3,6 +3,8 @@ package com.sudhir.samples.tdd;
 import com.sudhirt.samples.tdd.PrimeFactors;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class PrimeFactorsTest {
 
     @Test
@@ -17,6 +19,6 @@ public class PrimeFactorsTest {
     @Test
     public void factorsOf1() {
         PrimeFactors primeFactors = new PrimeFactors();
-        primeFactors.factorsOf(1);
+        assertThat(primeFactors.factorsOf(1)).isEmpty();
     }
 }
