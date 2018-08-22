@@ -16,6 +16,11 @@ public class PrimeFactorsTest {
     }
 
     @Test
+    public void factorsOf0() {
+        assertThat(primeFactors.factorsOf(0)).isEmpty();
+    }
+
+    @Test
     public void factorsOf1() {
         assertThat(primeFactors.factorsOf(1)).isEmpty();
     }
@@ -58,5 +63,16 @@ public class PrimeFactorsTest {
     @Test
     public void factorsOf9() {
         assertThat(primeFactors.factorsOf(9)).containsExactly(3, 3);
+    }
+
+    @Test
+    public void factorsOf10() {
+        assertThat(primeFactors.factorsOf(10)).containsExactly(2, 5);
+    }
+
+    @Test
+    public void factorsOf_2X2X2X3X3X5X5X5X7X9X11X15X17() {
+        assertThat(primeFactors.factorsOf(2*2*2*3*3*5*5*5*7*11*11*17))
+                .containsExactly(2, 2, 2, 3, 3, 5, 5, 5, 7, 11, 11, 17);
     }
 }
