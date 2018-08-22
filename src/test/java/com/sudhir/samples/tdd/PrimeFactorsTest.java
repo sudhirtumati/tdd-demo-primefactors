@@ -13,4 +13,10 @@ public class PrimeFactorsTest {
     public void createsInstance() {
         PrimeFactors primeFactors = new PrimeFactors();
     }
+
+    @Test
+    public void factorsOf1() {
+        PrimeFactors primeFactors = new PrimeFactors();
+        primeFactors.factorsOf(1);
+    }
 }
