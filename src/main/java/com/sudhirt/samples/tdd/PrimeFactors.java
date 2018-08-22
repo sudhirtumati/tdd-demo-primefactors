@@ -7,7 +7,13 @@ public class PrimeFactors {
 
     public List<Integer> factorsOf(Integer number) {
         List<Integer> factors = new ArrayList<>();
-        if(number > 1) {
+        if (number > 1) {
+            if (0 == number % 2) {
+                factors.add(2);
+                number /= 2;
+            }
+        }
+        if (number > 1) {
             factors.add(number);
         }
         return factors;
