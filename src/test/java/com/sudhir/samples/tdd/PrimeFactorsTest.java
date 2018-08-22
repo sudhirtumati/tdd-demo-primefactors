@@ -39,4 +39,14 @@ public class PrimeFactorsTest {
     public void factorsOf5() {
         assertThat(primeFactors.factorsOf(5)).containsExactly(5);
     }
+
+    @Test
+    public void factorsOf6() {
+        assertThat(primeFactors.factorsOf(6)).containsExactly(2, 3);
+    }
+
+    @Test
+    public void factorsOf7() {
+        assertThat(primeFactors.factorsOf(7)).containsExactly(7);
+    }
 }
